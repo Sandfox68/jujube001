@@ -1,11 +1,68 @@
+@font-face {
+    font-family: 'MyFont'; /* Define the custom font name */
+    src:  url('fonts/D-DIN.otf') format('opentype');
+    font-display: fallback; /* Define how the browser behaves during download */
+}
+
 
 body {
-	font-size: 0;
+    font-size: 0px;
 }
+
+img {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:40%;
+}
+
+
+.center {
+    text-align: center;
+    border: 0px solid grey;
+}
+
+.sloganbox {
+    position: relative;
+    margin-top: 7px;
+}
+#slogan {
+    font-family: MyFont, sans-serif;
+    font-size: 15px;
+
+}
+#slogan::before {
+    content:'';
+    background-image: url(./img/logo_leftDec.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    width: calc((100%-165px)/2);
+    max-width: 42%;
+    height: 9px; 
+    position:absolute;
+    left:0;
+    top:4px;
+
+}
+
+#slogan::after {
+    content:'';
+    background-image: url(./img/logo_rightDec.png);
+    background-position:left;
+    background-repeat: no-repeat;
+    width: calc((100%-165px)/2);
+    max-width: 42%;
+    height: 9px; 
+    position:absolute;
+    right:0;
+    top:4px;
+
+}
+
 *,
 *::before,
 *::after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
+} 
