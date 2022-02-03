@@ -3,7 +3,7 @@
     src:  url('fonts/D-DIN.otf') format('opentype');
     font-display: fallback; /* Define how the browser behaves during download */
 }
-
+/*Import Font D-Din*/
 
 body {
     font-size: 0px;
